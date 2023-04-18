@@ -1,0 +1,26 @@
+name: Upload schemas
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Upload configuration
+    env:
+      URL: ${{secrets.REG_URL}}
+      ID: ${{secrets.USERID}}
+      SECRET: ${{secrets.PWD}}
+      TOKEN: ${{secrets.TOKEN}}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install Python dependencies
+        run: python -m pip install --upgrade pip apicurioregistryclient
+        
+      #- name: Install Goto
+       # run: python -m pip install --upgrade pip goto-module
+
+      - name: Upload configuration
+        run: python .github/scripts/upload.py
