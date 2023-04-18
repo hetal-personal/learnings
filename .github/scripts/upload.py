@@ -34,8 +34,9 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
     #header = 'Authorization: Bearer ' + os.environ['TOKEN']
     
     #schemaObject = requests.get(url, headers={'Authorization': token}).json()
-    schemaObject = requests.get(url, headers={'Authorization': token}).json()
-    schemaJson = json.loads(requests.get(schemaObject["download_url"]).content)
+    schemaObject = requests.get(url).content
+    #schemaJson = json.loads(requests.get(schemaObject["download_url"]).content)
+    schemaJson = json.loads(schemaObject)
     id = artifactName.title().replace(" ", "") + "." + type.lower()
     
     try:
