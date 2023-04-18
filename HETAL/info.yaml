@@ -11,7 +11,7 @@ schemas:
     description: "Metadata for finding and understanding the data asset."
     version: "0.1.0"
     compatibilityRule: "BACKWARD"
-    url: "https://api.github.com/repos/hetal-personal/csde/contents/meta_schemas/meta_model/data_discovery.json?ref=main"
+    url: "https://raw.githubusercontent.com/hetal-personal/csde/main/meta_schemas/meta_model/data_discovery.json?token=GHSAT0AAAAAACBQM66WSNI7T5ZUGXHZGNC4ZB67LWA"
     labels: 
       - "meta_model"
   - name: "Data Governance"
