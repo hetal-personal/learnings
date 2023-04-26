@@ -85,7 +85,7 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                                                     },
                                                     _content_type="application/json"
                                                     )
-            msg = '\n' + result["id"] + ' schema is available at: ' + schemaRegistryUrl + '\n \n'
+        msg = '\n' + result["id"] + ' schema is available at: ' + schemaRegistryUrl + '\n \n'
         #except requests.exceptions.RequestException as err:
         except apicurioregistryclient.exceptions.ApiException as err:
             print(err)
