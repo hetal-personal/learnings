@@ -105,6 +105,6 @@ systemNames = [item.name for item in os.scandir('.') if item.is_dir() and re.sea
 
 for systemName in systemNames:
     #if f"{systemName}/info.yaml" in os.environ['MODIFIED_FILES']:
-        extract("EVENTM")
+        extract("HETAL")
     #else:
      #   print(f"Skipping '{systemName}/info.yaml' as it was not changed")
