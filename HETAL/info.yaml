@@ -47,4 +47,3 @@ schemas:
     url: "https://api.github.com/repos/hetal-personal/csde/contents/meta_schemas/meta_model/software_system.json?ref=main"
     labels: 
       - "meta_model"
-notificationEmail: "htl.ghelani@gmail.com"
