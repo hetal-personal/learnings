@@ -63,6 +63,7 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                                                   if_exists='RETURN_OR_UPDATE',
                                                   _content_type="application/binary"
                                                   )
+            msg = '\n' + result["id"] + ' schema is available at: ' + schemaRegistryUrl + '\n \n'
             print(f"INFO: Successfully uploaded " + result["id"] + " schema")
             if labels:
                 print(f"INFO: Adding the labels.")
@@ -85,7 +86,6 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                                                     },
                                                     _content_type="application/json"
                                                     )
-        msg = '\n' + result["id"] + ' schema is available at: ' + schemaRegistryUrl + '\n \n'
         #except requests.exceptions.RequestException as err:
         except apicurioregistryclient.exceptions.ApiException as err:
             print(err)
