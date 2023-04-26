@@ -5,7 +5,7 @@ schemas:
     description: "Definition of a Business Term."
     version: "0.1.0"
     compatibilityRule: "BACKWARD"
-    url: "https://raw.githubusercontent.com/hetal-personal/csde/main/meta_schemas/meta_model/business_term.json?token=GHSAT0AAAAAACBQM66XWGMTUJPRG3BDBLOEZB67JDQ"
+    url: "https://raw.githubusercontent.com/hetal-personal/csde/main/meta_schemas/meta_model/business_term.json?token=GHSAT0AAAAAACB4TXXU2KDLGO6Y5W6UZBXMZCJC25Q"
   - name: "Data Discovery"
     type: "JSON"
     description: "Metadata for finding and understanding the data asset."
