@@ -5,14 +5,7 @@ on:
       - main
     paths:
       - '**/info.yaml'
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'    
+  workflow_dispatch:   
 jobs:
   build:
     name: Upload configuration
