@@ -3,6 +3,7 @@ schemas:
   - name: "Business Term"
     type: "JSON"
     description: "Definition of a Business Term."
+    
     version: "0.1.0"
     compatibilityRule: "BACKWARD"
     url: "https://api.github.com/repos/hetal-personal/csde/contents/meta_schemas/meta_model/business_term.json?ref=main"
