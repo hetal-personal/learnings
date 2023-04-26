@@ -29,9 +29,9 @@ def extract(systemName):
 def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, url, labels, rules):
     #connecting with the Registry API based on client ID and Secret
     configuration = apicurioregistryclient.Configuration(
-      host=os.environ['ESR_INSTANCE_BASE_URL'],
-      username=os.environ['ESR_CLIENT_ID'],
-      password=os.environ['ESR_CLIENT_SECRET']
+      host=os.environ['URL'],
+      username=os.environ['ID'],
+      password=os.environ['SECRET']
     )
     token = 'Bearer ' + os.environ['TOKEN']
 
@@ -45,8 +45,8 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
         raise Exception(f"ERROR: Schema to be uploaded exceeds the allowed schema size of 64KB.")
 
     id = artifactName.title().replace(" ", "") + "." + type.lower()
-    schemaJson["$id"] = os.environ['ESR_INSTANCE_BASE_URL'] + '/groups/' + groupID + '/artifacts/' + id + '/versions/' + schemaVersion
-    schemaRegistryUrl = os.environ['REGISTRY_INSTANCE'] + '/artifacts/' + groupID + '/' + id + '/versions/' + schemaVersion
+    schemaJson["$id"] = os.environ['URL'] + '/groups/' + groupID + '/artifacts/' + id + '/versions/' + schemaVersion
+    schemaRegistryUrl = os.environ['URL'] + '/artifacts/' + groupID + '/' + id + '/versions/' + schemaVersion
 
     retry_count = 0
     max_retries = 2
