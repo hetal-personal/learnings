@@ -93,7 +93,7 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                 # rate limit reached, wait 2 seconds and try again
                 time.sleep(retry_interval)
                 retry_count += 1
-                print("From if block within exceptions")
+                print("From if block within exceptions, retry #", retry_count)
             else:
                 # another error, throw the exception
                 raise err
