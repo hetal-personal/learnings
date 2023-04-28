@@ -87,6 +87,7 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                                                     _content_type="application/json"
                                                     )
         #except requests.exceptions.RequestException as err:
+            break        
         except apicurioregistryclient.exceptions.ApiException as err:
             print(err)
             if err.status == 409:
