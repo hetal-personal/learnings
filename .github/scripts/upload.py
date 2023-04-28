@@ -99,6 +99,8 @@ def uploadSchema(groupID, type, artifactName, schemaDescription, schemaVersion, 
                 # another error, throw the exception
                 raise err
             traceback.print_exc()
+            if retry_count == max_retries:
+                print("Error: exhausted retries")            
         #print("ERROR: Error occurred" + err)
         return msg
 
